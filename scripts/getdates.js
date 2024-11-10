@@ -1,6 +1,7 @@
 
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    const lastModified = document.getElementById('lastmodified');
-    lastModified.textContent = `Last modified: ${document.lastModified}`;
-});
+const lastModifiedDate = new Date(document.lastModified);
+
+const formattedDate = lastModifiedDate.toLocaleString();
+
+document.getElementById("lastModified").textContent += formattedDate;
