@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 | JavaScript Introduction</title>
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/course.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 131<span id="coursetitle">: Dynamic Web Fundamentals</span></h1>
+      <img src="../images/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+  <main class="page">
+    <nav>
+      <span><a href="../">Home</a></span>
+      <span class="active"><a href="../week01/">W1</a></span>
+      <span><a href="../week02/">W2</a></span>
+      <span><a href="../week03/">W3</a></span>
+      <span><a href="../week04/">W4</a></span>
+      <span><a href="../week05/">W5</a></span>
+      <span><a href="../week06/">W6</a></span>
+      <span><a href="../week07/">W7</a></span>
+    </nav>
+
+    <h2>JavaScript Introduction</h2>
+
+    <h3>Overview</h3>
+    <p>
+      JavaScript is a popular, well-supported programming language that is used to create
+      interactive and dynamic web pages and applications as well as mobile, and
+      desktop applications. It is a high-level, interpreted language that is designed to run in web
+      browsers. JavaScript can also be used on the server-side with the help of technologies like
+      Node.js.
+    </p>
+    <p>In this class you will learn how to apply your prerequisite, programming knowledge to the web using JavaScript.
+      JavaScript uses the same concepts
+      and common control structures as any other programming language.</p>
+
+    <div class="callout info">
+      <p>
+        JavaScript is one of the three, core technologies of web
+        frontend development.The other two are HyperText Markup Language (HTML) and
+        Cascading Styles Sheets (CSS).
+      <ul>
+        <li>HTML defines the <strong>structure</strong> and meaning of a page.</li>
+        <li>CSS defines the style or <strong>presentation</strong> of a page.</li>
+        <li>JavaScript handles the <strong>behavior</strong> based upon user interaction and other events.</li>
+      </ul>
+      </p>
+    </div>
+
+    <details>
+      <summary>Associated Course Learning Outcomes</summary>
+      <p>
+      <ul>
+        <li>Demonstrate proficiency with JavaScript language syntax.</li>
+        <li>Use JavaScript to respond to events and dynamically modify HTML.</li>
+      </ul>
+      </p>
+    </details>
+
+    <h3>Activity Instructions</h3>
+
+    <p>Answer the following questions using this resource <a
+        href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript" target="_blank"
+        rel="noopener">What is JavaScript?</a> - MDN Web Docs or use your own research.
+
+    <div class="callout ai">
+      <p>
+        You are encouraged to responsibly use contemporary language model and generative AI tools
+        like <a href="https://chat.openai.com/" target="_blank" rel="noopener">ChaGPT</a>, <a
+          href="https://bard.google.com/chat" target="_blank" rel="noopener">Bard</a>,
+        <a href="https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx" target="_blank" rel="noopener">Bing
+          Chat</a>, or <a href="https://www.meta.ai/" target="_blank" rel="noopener">Meta AI</a>. Learn to use these
+        tools as an instant tutor to help define concepts, clarify questions, and to provide guidance.
+      </p>
+    </div>
+
+    <ul>
+      <li>What is the file extension used for JavaScript files?
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code>.js</code></pre>
+        </details>
+      </li>
+      <li>How is JavaScript included on web pages?
+        <details>
+          <summary>Check Your Understanding</summary>
+          <p>A <code>&lt;script&gt;</code> HTML tag is used to include JavaScript code in an HTML like this:
+          <pre><code class="html">&lt;script&gt;&lt;/script&gt;</code></pre>
+          The <code>script</code> tag can be used anywhere on the page.
+          <br> This course uses external script files and places the source reference in the <code>head</code> of the
+          HTML document.
+          </p>
+        </details>
+      </li>
+      <li>What standard way does this course reference JavaScript?
+        <ul class="check">
+          <li>Use external JavaScript files.</li>
+          <li>Place the JavaScript files in the <code>scripts</code> subfolder of the site.</li>
+          <li>Reference the script in the <code>head</code> of the HTML document.</li>
+          <li>The <code>defer</code> attribute will be used to ensure the HTML loads first.</li>
+        </ul>
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code>&lt;script src="scripts/myscripts.js" defer&gt;&lt;/script&gt;</code></pre>
+        </details>
+      </li>
+  
+
+    </ul>
+   
+    </p>
+
+    <h4>Common Misconceptions and Language Issues</h4>
+    <ul>
+      <li>
+        JavaScript is not the same programming language as the <a
+          href="https://www.java.com/en/download/help/whatis_java.html" target="_blank"
+          rel="noopener"><strong>Java</strong></a>
+        programming language. They are two different languages with different syntax and
+        purposes.
+      </li>
+
+      <li>
+        The plural form of "code" in programming is just "<strong>code</strong>", not "codes". <br>
+        <em>Example: "Please review my code." or "Please review my program". Not "Please review my
+          codes."</em>
+      </li>
+
+      <li>
+        JavaScript is not just for the browser and client-side scripting. With the
+        introduction of server-side frameworks like Node.js, JavaScript can now be used for
+        server-side development as well. JavaScript is a mature language and has become more powerful
+        and versatile over time.
+      </li>
+    </ul>
+
+    <div class="callout reference">
+      <h4>Optional Resources</h4>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=JqCo6XaXTAk" target="_blank" rel="noopener">What is
+            JavaScript?</a> - codecademy <span class="smaller">~10:00 minutes</span></li>
+        <li><a href="https://www.w3schools.com/js/" target="_blank" rel="noopener">W3Schools</a></li>
+        <li><a href="https://www.jshero.net/" target="_blank" rel="noopener">JavaScript Hero</a></li>
+      </ul>
+    </div>
+
+    <hr>
+    <nav>
+      <span><a href="index.html">Back</a></span>
+    </nav>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 | HTMl and CSS Layout Review</title>
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/course.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 131<span id="coursetitle">: Dynamic Web Fundamentals</span></h1>
+      <img src="../images/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+  <main class="page">
+
+    <nav>
+      <span><a href="../">Home</a></span>
+      <span class="active"><a href="../week01">W1</a></span>
+      <span><a href="../week02">W2</a></span>
+      <span><a href="../week03">W3</a></span>
+      <span><a href="../week04">W4</a></span>
+      <span><a href="../week05">W5</a></span>
+      <span><a href="../week06">W6</a></span>
+      <span><a href="../week07">W7</a></span>
+    </nav>
+
+    <h2>HTML and CSS Review</h2>
+    <h3>Overview</h3>
+    <p>This learning activity is a review of layout principles in HTML and CSS. The focus is on
+      reviewing prerequisite knowledge on core HTML and CSS layout design and development. In
+      addition, reviewing and practicing the workflow of writing code in VS Code, testing,
+      committing, and pushing your work to your GitHub repository is critical to your success in the
+      course.</p>
+
+    <h3>Task</h3>
+    <p>Create the following layout with <a href="https://www.computerhope.com/jargon/p/plactext.htm" target="_blank"
+        rel="noopener">placeholder</a> content.</p>
+    <figure class="floatright">
+      <img src="../images/layoutreview-task.png" alt="HTML and CSS Layout Review Activity Task Screenshot">
+      <figcaption>Figure 1: HTML and CSS Layout Review Activity Task Screenshot</figcaption>
+    </figure>
+
+
+
+    <details>
+      <summary>Associated Course Learning Outcome(s)</summary>
+      <p class="smaller">Develop responsive web pages that follow best practices and use valid HTML
+        and CSS.</p>
+    </details>
+
+    <h3>Prepare</h3>
+    <ul>
+      <li><strong>Watch</strong>: The holy grail layout segment (7:45-10:03) of <a class="inline_disabled"
+          href="https://youtu.be/qm0IfG1GyZU?t=465" target="_blank" rel="noopener">10
+          Modern Layouts</a> - Google Chrome Developers. (~2.5m)
+        <div class="callout info">
+          <p>This <a href="https://codepen.io/blazzard-jason/pen/mdKRJjK" target="_blank" rel="noopener">CodePen</a>
+            provides an opportunity for you to work with the layout
+            demonstrated in the video.</p>
+        </div>
+      </li>
+
+      <li><strong>Review</strong>: This <a href="https://codepen.io/blazzard-jason/pen/bqxKGe" target="_blank"
+          rel="noopener">CodePen</a>
+        gives an example of using <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox"
+          target="_blank" rel="noopener">CSS Flex</a> in a navigation menu.
+      </li>
+    </ul>
+
+    <h3>Activity Instructions</h3>
+    <h4 class="step">File and Folder Setup</h4>
+    <figure class="floatright">
+      <img src="../images/layout-file-structure.png" alt="Example Screenshot of File and Folder Setup in VS Code"
+        loading="lazy" width="300">
+      <figcaption>Figure 1: VS Code - File/Folder Structure Example</figcaption>
+    </figure>
+    <ol>
+      <li>In VS Code, add a new sub-folder named "<strong>week01</strong>" within your
+        <code>wdd131</code> local
+        repository folder.
+      </li>
+      <li>Add a file named "<strong>basic-layout.html</strong>" to the <code>week01</code> folder.
+      </li>
+      <li>Add a new sub-folder within the <code>week01</code> folder named
+        "<strong>styles</strong>".</li>
+      <li>Create a supporting, external CSS file named "<strong>layout.css</strong>" and place it
+        in <code>styles</code> folder.</li>
+    </ol>
+    <h4 class="step">HTML</h4>
+    <ol>
+      <li>In the <code>basic-layout.html</code> file, use semantic HTML to support the given layout.
+        <div class="callout info smaller">Consider using an <strong>Emmet</strong> shortcut in VS
+          Code by typing <code>html5</code> or just an <code>!</code> and then hit the tab key on a blank
+          screen in the HTML document. This action will build a core HTML structure.</div>
+      </li>
+      <li>Ensure that your navigation container element is contained <strong>within</strong> the <code>header</code>
+        element.</li>
+      <li>Include the placeholder content, e.g., "Header Content", etc.</li>
+      <li>Link the external CSS file.</li>
+      <li>Always use appropriate <code>title</code> content. In this assignment, include your name and WDD 131.</li>
+    </ol>
+    <h4 class="step">CSS</h4>
+    <ol>
+      <li>Use CSS Grid on the body of the document to support the given layout.</li>
+      <li>Use CSS Flex to support the navigation menu.</li>
+      <li>The color schema and font family choices are yours.</li>
+
+    </ol>
+    <h4 class="step">Test Page</h4>
+    <p>Remember that you can check your work using <strong>Live Server</strong> through VS Code
+      locally. The <strong>Live Server</strong> extension allows you to open the page locally in
+      your browser.</p>
+
+    <h3>Check Your Understanding</h3>
+    <ul>
+      <li>Commit and push your work to your GitHub Pages repository.
+        <div class="callout info">
+          <p>
+            Demonstration Video: ► <a href="https://video.byui.edu/media/t/1_51j29t43" target="_blank"
+              rel="noopener">Working with GitHub and VS Code</a>
+          </p>
+        </div>
+      </li>
+      <li>After waiting for a few minutes for the server to update, check the render of the page in
+        a browser. Does it look like the example screenshot above?
+        <div class="callout reference smaller">
+          <p>
+            Example URL:
+            <code>https://<em>yourgithubusername</em>.github.io/wdd131/week01/basic-layout.html</code>
+          </p>
+        </div>
+      </li>
+      <li>Audit the basic HTML and CSS of your page using this <a href="../audit/w01-basic-layout.html">Page Audit
+          Tool</a>.</li>
+      <li>Make corrections as needed, test, and then commit and push/upload your changes.</li>
+
+    </ul>
+
+    <hr>
+    <nav>
+      <span><a href="index.html">Back</a></span>
+    </nav>
+
+  </main>
+
+  <footer>
+    <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</body>
+
+</html>
