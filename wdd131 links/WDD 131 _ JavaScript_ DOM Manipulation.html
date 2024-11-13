@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 | JavaScript: DOM Manipulation</title>
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/course.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 131<span id="coursetitle">: Dynamic Web Fundamentals</span></h1>
+      <img src="../images/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+
+  <main class="page">
+    <nav>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course">Home</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week01">W1</a></span>
+      <span class="active"><a href="https://byui-cse.github.io/wdd131-ww-course/week02">W2</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week03">W3</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week04">W4</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week05">W5</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week06">W6</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week07">W7</a></span>
+    </nav>
+    <h2>JavaScript: DOM Manipulation</h2>
+
+    <h3>Overview</h3>
+    <p>One of the key skill sets of any frontend web developer is the ability to manipulate the
+      document dynamically using the <a
+        href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank"
+        rel="noopener">DOM</a>, a JavaScript object that is built after the browser
+      initially builds the document. To manipulate the DOM means to read, edit, update, or
+      delete the document, including CSS properties, dynamically. The DOM is the outline of the HTML
+      and content nodes.
+      The purpose of this activity is to introduce the HTML DOM and to learn how to change or
+      manipulate the document using JavaScript.</p>
+
+    <details class="clo">
+      <summary>Associated Course Learning Outcomes</summary>
+      <p class="smaller">Demonstrate proficiency with JavaScript language syntax. <br>Use JavaScript
+        to respond to events and dynamically modify HTML.</p>
+    </details>
+
+    <h3>Prepare</h3>
+    <div class="callout info">
+      <a href="https://youtu.be/NO5kUNxGIu0?si=0AV68_oBlm7VnWg3" target="_blank" rel="noopener">The JavaScript
+        DOM explained in 5 minutes!</a> - Bro Code
+    </div>
+    <ul>
+      <li>Reference: <a
+          href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents"
+          target="_blank" rel="noopener">Manipulating documents</a> - MDN.
+        <div class="callout info">
+          <p class="smaller">Note that the <a
+              href="https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html"
+              target="_blank" rel="noopener">Active learning: A dynamic shopping list</a> example
+            found at the end of the MDN article will <strong>help</strong> you complete this
+            week's activities.</p>
+        </div>
+      </li>
+      <li>Practice: <strong>Some common DOM manipulation concepts/use cases</strong>.
+        <ul>
+          <li>To <strong>select</strong> an HTML element from the document - using the <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector" target="_blank"
+              rel="noopener">querySelector</a> method.<br>This
+            line of code selects the first instance of an article element from the document and
+            assigns the element as a reference to the variable named <code>article</code>.
+            <pre><code class="javascript">const article = document.querySelector('article');</code></pre>
+          </li>
+          <li>To <strong>change</strong> the innerHTML property of an existing element.<br>This line
+            of code uses an
+            existing variable that has already
+            selected an element and changes its innerHTML property value.
+            <pre><code class="javascript">article.innerHTML = 'innerHTML supports &lt;strong&gt;HTML&lt;/strong&gt; tags. The textContent property does not.';</code></pre>
+          </li>
+          <li>To <strong>change</strong> the inline CSS style of an element.<br>This line
+            of code changes the text-align CSS property of the selected element.
+            <pre><code class="javascript">article.style.textAlign = 'right';</code></pre>
+          </li>
+          <li>To <strong>change</strong> an attribute of an element.<br>This line of code
+            adds and attribute class to the element and gives it a value.
+            <pre><code class="javascript">article.setAttribute('class', 'active');</code></pre>
+            <div class="callout info smaller">
+              <p>An alternative way to change an attribute of an element, specifically the class
+                attribute, is by
+                directly manipulating the element's classList.
+              <pre><code class="javascript">articleElement.classList.add('active');</code></pre>
+              This method is often preferred when working with class manipulation because classList
+              provides
+              additional methods like add, remove, toggle, and contains, making it more convenient
+              and expressive
+              for managing classes on an element.
+              </p>
+            </div>
+          </li>
+          <li>To <strong>create</strong> an element.<br>This line of code creates a new
+            &lt;p&gt; element and stores it in the variable named paragraph.
+            <pre><code class="javascript">const paragraph = document.createElement('p');</code></pre>
+          </li>
+          <li>To <strong>append</strong> an element with additional content or elements.<br>These
+            lines of code add content to the end of the article element.
+            <pre><code class="javascript">article.appendChild(paragraph);
+article.append(paragraph, 'Hello World Addition!');</code></pre>
+            <div class="callout info smaller">
+              The append() method allows you to include multiple arguments
+              to append to the
+              element in the specified order.
+            </div>
+          </li>
+          <li>To <strong>remove</strong> an element from the document.<br>These lines of
+            code remove the paragraph from the article and then, the article itself.
+            <pre><code class="javascript">article.removeChild(paragraph);
+article.remove();</code></pre>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h3>Activity Instructions</h3>
+    <img class="floatright" src="../images/BOMApp.png" alt="Example screen shot of Book of Mormon chapter application"
+      loading="lazy" width="350">
+    <div class="callout info">
+      <p>This Book of Mormon application will be added upon in future
+        learning activities. We
+        start now with the interface and basic DOM assignments and build.</p>
+    </div>
+    <p>This app allows users to enter their favorite Book of Mormon chapters and display them on a
+      list that is updated
+      automatically on the screen. Entries can then be deleted from the displayed list.</p>
+
+    <ol>
+      <li>Create an HTML file named "<strong>bom.html</strong>" in the <strong>week02</strong>
+        folder.</li>
+      <li>Your <strong>bom.html</strong> HTML document should include the basic meta tags and an
+        appropriate title.</li>
+      <li>Create an external CSS file and a JS file and place them in appropriate sub-folders within
+        the week02 folder.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <p class="smaller">In the <strong>week02</strong> folder, create two folders named
+            <strong>styles</strong> and <strong>scripts</strong>. Your css file will go in the
+            styles and your js file will go in the scripts. You already have folders on the root
+            <strong>wdd131</strong> named styles and scripts but that is OK. We will treat this
+            week02 folder independently of the outer wdd131 root folder.
+          </p>
+        </details>
+      </li>
+      <li>Copy and paste the basic interface (the HTML and CSS) from the following CodePen <a
+          href="https://codepen.io/blazzard-jason/pen/rNWgzoL" target="_blank" rel="noopener">BOM
+          Top 10</a>.</li>
+      <li>In your blank js file, declare three (3) variables that hold references to the
+        <strong>input</strong>, <strong>button</strong>, and <strong>list</strong> elements.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre>
+        <code class="javascript">const input = document.querySelector('#favchap');
+const button = document.querySelector('button');
+const list = document.querySelector('______'); // you need to fill in the blank to reference the HTML element that is a unordered list element.</code></pre>
+        </details>
+      </li>
+
+
+      <li>Create a <code>li</code> element that will hold each entries chapter title and an
+        associated delete button.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="javascript">const li = document.createElement('li');</code></pre>
+          <p class="callout reference smaller">We identified this variable as <strong>li</strong>,
+            however, that was
+            just for simplicity.<br> The variable identifier/name did not have to be named the same
+            as the element being created.</p>
+        </details>
+      </li>
+
+      <li>Create a delete <code>button</code>.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="javascript">const deleteButton = document.createElement('button');</code></pre>
+        </details>
+      </li>
+
+      <li>Populate the <code>li</code> element variable's <code>textContent</code> or
+        <code>innerHTML</code> with the input value.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="javascript">li.textContent = input.value;</code></pre>
+          <p class="callout reference smaller">
+            <strong>textContent</strong> is preferred over <strong>innerHTML</strong> because it is
+            more secure. <br>However, if you need to include HTML tags, then you would use
+            <strong>innerHTML</strong>. <br><strong>textContent</strong> will not render HTML tags.
+            It will display the tags as text.
+          </p>
+          <p class="callout reference smaller">
+            Why is the <strong>value</strong> property used?<br>
+            Because the <strong>input</strong> variable references an HTML input text field and that
+            is what is wanted, i.e., the user's entry. Here is the HTML that was provided:
+            <code>&lt;input type="text" id="favchap" placeholder="Alma 5"&gt;</code>
+          </p>
+        </details>
+
+      </li>
+      <li>Populate the button textContent with a ❌.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="javascript">deleteButton.textContent = '❌';</code></pre>
+        </details>
+      </li>
+      <li>Append the li element variable with the delete button.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="javascript">li.append(deleteButton);</code></pre>
+        </details>
+      </li>
+      <li>Append the li element variable to the unordered list in your HTML.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="javascript">list.append(li);</code></pre>
+        </details>
+      </li>
+    </ol>
+
+    <div class="callout warning">
+      <p>So far, we have just setup the interface and completed some basic DOM interaction. The
+        application <strong>will not work at this point</strong>. The next activity will teach how
+        to respond to events, like button clicks. We need to wait for the user to make an entry into
+        the favorite chapter text field before processing.</p>
+    </div>
+    <h3>Submission</h3>
+    <ul>
+      <li>Continuously save your work. We will add
+        additional functionality in the next activity.</li>
+    </ul>
+
+    <div class="callout reference smaller">
+      <h4>Optional Resources</h4>
+      <ul>
+        <li><a href="https://youtu.be/y17RuWkWdn8" target="_blank" rel="noopener">DOM
+            Manipulation</a> &ndash; by Web Dev Simplified &ndash; 14 key
+          techniques in summary demonstration format. Take special note of the concept of
+          <strong>datasets</strong>.
+        </li>
+        <li>We do need to consider screen readers and how they will interpret anything that we have
+          in
+          content. For example, the delete button just has an emoticon and may not read correctly as
+          the
+          button to remove a chapter. What can we do? One solution is to create a <a
+            href="https://developer.mozilla.org/en-US/docs/Web/API/Element/ariaLabel" target="_blank"
+            rel="noopener">aria-label attribute</a> on the button with a value like
+          "Remove Alma 5"
+        </li>
+      </ul>
+    </div>
+
+    <hr>
+    <nav>
+      <span><a href="index.html">Back</a></span>
+    </nav>
+  </main>
+  <footer>
+    <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="../scripts/prevent-code-select.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 | JavaScript Common Programming Constructs</title>
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../styles/course.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 131<span id="coursetitle">: Dynamic Web Fundamentals</span></h1>
+      <img src="../images/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+
+  <main class="page">
+    <nav>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course">Home</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week01">W1</a></span>
+      <span class="active"><a
+          href="https://byui-cse.github.io/wdd131-ww-course/week02">W2</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week03">W3</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week04">W4</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week05">W5</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week06">W6</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week07">W7</a></span>
+    </nav>
+
+    <h2>JavaScript: Fundamental Programming Constructs</h2>
+
+    <h3>Overview</h3>
+    <p>Through the prerequisite programming course requirements for this course, you have
+      established a foundational understanding of the common, programming building blocks or
+      constructs including operators, expressions, decision structures, looping, and functions. This
+      activity focuses on a few of the common control structures in programming.</p>
+
+
+    <details class="clo">
+      <summary>Associated Course Learning Outcomes</summary>
+      <p class="smaller">Demonstrate proficiency with JavaScript language syntax.</p>
+    </details>
+
+    <h3>Prepare</h3>
+
+    <p>Some of the common controls structures or building blocks in JavaScript include:</p>
+    <p class="callout warning smaller">
+      This is not an exhaustive list of JavaScript programming
+      constructs. This is a list of some of the most common used. You will
+      learn more about these constructs and others as you apply them throughout the course.</p>
+
+
+    <ul class="check">
+      <li><strong>Conditional Statements</strong>:
+        <ul>
+          <li><code>if</code> statement: Executes a block of code if a specified condition is true.
+            <pre><code class="javascript">if (condition) {
+  // Code to execute if the condition is true
+}</code></pre>
+            <div class="callout info">
+              The condition is evaluated to a <strong>boolean</strong>
+              value, i.e., true or false.
+              Writing condition
+              statements is a critical skill in programming. The use of <a
+                href="../resources/javascript-operators.html">operators</a> and expressions is a key
+              concept in writing condition statements that solve programming problems.
+            </div>
+          </li>
+          <li><code>else</code> statement: Provides an alternative block of code to execute if the
+            condition in the if statement is false.
+            <pre><code class="javascript">if (condition) {
+  // Code to execute if the condition is true
+} else {
+  // Code to execute if the condition is false
+}</code></pre>
+          </li>
+          <li><code>else if</code> statement: This structure allows for the checking of multiple
+            conditions in sequence.
+            <pre><code class="javascript">if (condition1) {
+  // Code to execute if condition1 is true
+} else if (condition2) {
+  // Code to execute if condition2 is true
+} else {
+  // Code to execute if none of the conditions are true
+}</code></pre>
+          </li>
+        </ul>
+      </li>
+
+      <li><strong>Switch Statements</strong>: Provides a way to execute selective blocks of code
+        based on the value of an expression.
+        <pre><code class="javascript">switch (expression) {
+  case value1:
+    // Code to execute if expression is equal to value1
+    break;
+  case value2:
+    // Code to execute if expression is equal to value2
+    break;
+  // ... more cases ...
+  default:
+    // Code to execute if none of the cases match
+}</code></pre>
+      </li>
+
+      <li><strong>Looping Statements</strong>:
+        <ul>
+          <li><code>for</code> Loop: Repeats a block of coe a specified number of times.
+            <pre><code class="javascript">for (let i = 0; i &lt; 19; i++) {
+  // Code to execute in each iteration
+}</code></pre>
+          </li>
+          <li><code>while</code> Loop: Repeats a block of code as long as a specified condition is
+            true.
+            <pre><code class="javascript">while (condition) {
+  // Code to execute while the condition is true
+}</code></pre>
+          </li>
+          <li><code>forEach</code> Loop: This loop structure is for <strong>arrays</strong>. It
+            iterates over each element of the array.
+            <pre><code class="javascript">array.forEach(function(element) {
+  // Code to execute for each element
+});</code></pre>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h3>Activity Instructions</h3>
+    <ol>
+      <li>Ponder: <a href="../resources/javascript-looping.html">Repitition Structures</a></li>
+    </ol>
+
+
+    <div class="callout reference smaller">
+      <h4>References</h4>
+      <ul>
+        <li><a
+            href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals"
+            target="_blank" rel="noopener">Making decisions in your code — conditionals</a> - MDN.
+        </li>
+        <li><a
+            href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code"
+            target="_blank" rel="noopener">Looping code</a> - MDN.</li>
+      </ul>
+    </div>
+
+    <hr>
+    <nav>
+      <span><a href="index.html">Back</a></span>
+    </nav>
+
+  </main>
+  <footer>
+    <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="../scripts/prevent-code-select.js"></script>
+</body>
+
+</html>
