@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 | CSS Media Queries</title>
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/course.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 131<span id="coursetitle">: Dynamic Web Fundamentals</span></h1>
+      <img src="../images/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+  <main class="page">
+    <nav>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course">Home</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week01">W1</a></span>
+      <span class="active"><a href="https://byui-cse.github.io/wdd131-ww-course/week02">W2</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week03">W3</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week04">W4</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week05">W5</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week06">W6</a></span>
+      <span><a href="https://byui-cse.github.io/wdd131-ww-course/week07">W7</a></span>
+    </nav>
+
+    <h2>CSS Media Queries</h2>
+    <h3>Overview</h3>
+    <p>CSS Media Queries help web designers/developers show different styles for the content on
+      various screen
+      sizes. Designers use these queries to decide when to change the design or layout based on the
+      content and set breakpoints, like the minimum screen width.</p>
+    <div class="callout warning">
+      <p>
+        "Do NOT define breakpoints based on device classes. Defining breakpoints based on specific
+        devices, products, brand names, or operating systems that are in use today can result in a
+        maintenance nightmare. Instead, the content itself should determine how the
+        layout adjusts to its container."<br> - <a
+          href="https://developers.google.com/web/fundamentals/design-and-ux/responsive#how_to_choose_breakpoints">How
+          to choose breakpoints</a> - Responsive Web - Google Web Fundamentals
+      </p>
+    </div>
+
+    <details class="clo">
+      <summary>Associated Course Learning Outcome(s)</summary>
+      <p class="smaller">Develop responsive web pages that follow best practices and use valid HTML
+        and CSS.</p>
+    </details>
+
+    <h3>Prepare</h3>
+    <p>CSS media queries are essential to responsive web design. The <code>@media</code> at-rule
+      specifies condition(s) to create a block of CSS rules that are applied if the condition(s)
+      evaluates to
+      true. This is extremely useful as selected elements can be repositioned, resized, hidden,
+      exposed, etc. based upon the user's viewport size. </p>
+    <p>Here is the general syntax is setting up a CSS media query:</p>
+    <pre><code class="css">@media not|only mediatype and (expressions) {
+  <em>/* CSS rules go here inside the @media query's opening and closing curly brackets {} */</em>
+}</code></pre>
+    <p>Here is an example CSS media query which could be embedded in a CSS file or be the entire
+      contents of a CSS file if wanted. This example only has one CSS rule.</p>
+    <pre><code class="css">@media screen and (min-width: 640px) {
+  h1 {
+    font-size: 2.5rem;
+    margin: 1rem;
+    color: navy;
+  }
+}</code></pre>
+
+    <div class="callout reference"><strong>Sample code explanation</strong>
+      <p>1️⃣ The <code>@media screen and (min-width: 640px) {</code>is the signature line of the @media query block of CSS rules to be applied if the conditions are met. In this case the conditions are if the media type is a screen and the viewport minimum width is at least 640 pixels wide.</p>
+      <p>2️⃣ The <code>h1 {</code>is a heading 1
+        (&lt;h1&gt;) element selector which starts the defined <strong>CSS rule</strong>.</p>
+      <p>3️⃣-5️⃣ The <code>@font-size: 2.5rem; margin: 1rem; color: navy;</code> are
+        <strong>declarations </strong>to be applied to any &lt;h1&gt; elements if the @media query
+        conditions are met.
+      </p>
+      <p>6️⃣ The first <code>}</code>closes the CSS rule for &lt;h1&gt; code elements.</p>
+      <p>7️⃣ The last <code>}</code>closes the media query.</p>
+    </div>
+
+    <div class="callout warning">
+      <p>
+        ⚠️ Note that curly brackets { } are used to <strong>contain</strong> a specific media query and are also used to
+        define CSS Rules. Be sure to keep track of your bracket scope (start and end). Using automatic VS Code Format
+        Document features will help you recognize issues with your structure.
+      </p>
+    </div>
+
+    <div class="callout info">
+      <a href="https://video.byui.edu/media/t/0_oacos9ak" target="_blank" rel="noopener">Media Query Application
+        Demonstration</a> <span class="smaller"> ~3 min</span>
+    </div>
+    <h4>Design Considerations: The Viewport</h4>
+    <div class="callout info">
+      <a href="https://www.youtube-nocookie.com/embed/QY3lTBZnJmE" target="_blank" rel="noopener">Designing for
+        A Viewport</a><span class="smaller"> ~13:30 min | <a
+          href="https://docs.google.com/document/d/e/2PACX-1vTUZKjpijA6sx_e-XMjs9pYcBHpsz1m9XEfY3RBRmrXKoNqBK6bqBusCw8MTyL7yOdvG4lQrUCfWQOd/pub"
+          target="_blank" rel="noopener">Designing for a Viewport Transcript</a></span>
+    </div>
+
+
+    <h3>Activity Instructions</h3>
+    <p>For this activity, you will create a simple HTML page with two CSS files. The first CSS file
+      will be used to style the page for mobile devices. The second CSS file will be used to style
+      the page for larger viewports. You will use CSS media queries to apply the appropriate CSS
+      file
+      based upon the viewport width.</p>
+    <div class="callout info smaller">
+      <p>Remember that a responsible use of an ♾️AI generative tool could be
+        to ask questions about
+        how to formulate a specific code piece. For example, "how to combine selectors in CSS", and
+        an example will be given with which you can apply to your own code. Do not spin your tires
+        in the mud so
+        that you do not get stuck on a single requirement in the activity.</p>
+    </div>
+    <h4 class="step">File and Folder Setup</h4>
+    <ol>
+      <li>Add a new HTML file named "<strong>media-query.html</strong>" in a
+        "<strong>week02</strong>" named folder all within your same <strong>wdd131</strong> repo.
+      </li>
+      <li>Add two CSS files named "<strong>media-query.css</strong>" and
+        "<strong>media-query-large.css</strong>" to an appropriate subfolder
+        ("<strong>styles</strong>") within the <strong>week02</strong> folder.</li>
+    </ol>
+
+    <h4 class="step">HTML</h4>
+    <ol>
+      <li>In your <strong>media-query.html</strong> file, create a valid HTML page with standard
+        <strong>head</strong> content including
+        <ul class="check">
+          <li>Meta Charset Attribute</li>
+          <li>Meta Viewport Element</li>
+          <li>Title Element</li>
+          <li>Meta Description Element</li>
+          <li>Meta Author Element</li>
+          <li>Link to a Google Font named "Roboto" - regular 400.</li>
+          <li>Link references to your CSS two (2) files. Link the <strong>media-query.css</strong>
+            file first.</li>
+        </ul>
+        <details>
+          <summary>Example</summary>
+          <pre><code class="html">&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;WDD 131 - Media Query Example&lt;/title&gt;
+  &lt;meta name="description" content="Media query learning activity example page."&gt;
+  &lt;meta name="author" content="[Put your full name here]"&gt;
+  &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+  &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+  &lt;link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet"&gt;
+  &lt;link rel="stylesheet" href="styles/media-query.css"&gt;
+  &lt;link rel="stylesheet" href="styles/media-query-large.css"&gt;
+&lt;/head&gt;</code></pre>
+        </details>
+      </li>
+      <li>In the <strong>body</strong> of the HTML document, add a <strong>header</strong> with an
+        <strong>h1</strong>, a <strong>main</strong> element with two <strong>section</strong>
+        elements, and a <strong>footer</strong> element.
+        <ol>
+          <li>The h1 element should contain the words "Media Query Example".</li>
+          <li>Each section h2 heading contains a scripture with book, chapter, and verse.</li>
+          <li>The section paragraph contains a copy of the actual scripture referenced in the
+            heading.
+          </li>
+          <li>The footer should contain your name.</li>
+        </ol>
+        <details>
+          <summary>Example</summary>
+          <pre><code class="html">&lt;header&gt;
+  &lt;h1&gt;Media Query Example&lt;/h1&gt;
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;section&gt;
+    &lt;h2&gt;2 Nephi 32:9&lt;/h2&gt;
+    &lt;p&gt;But behold, I say unto you that ye must pray always, and not faint; that ye must not perform any thing unto the Lord save in the first place ye shall pray unto the Father in the name of Christ, that he will consecrate thy performance unto thee, that thy performance may be for the welfare of thy soul.&lt;/p&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Helaman 12:24&lt;/h2&gt;
+    &lt;p&gt;And may God grant, in his great fulness, that men might be brought unto repentance and good works, that they might be restored unto grace for grace, according to their works.&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+&lt;footer&gt;
+  [Your Full Name Here]
+&lt;/footer&gt;</code></pre>
+        </details>
+      </li>
+    </ol>
+
+    <h4 class="step">CSS</h4>
+    <ol>
+      <li>Style the document as shown in the example screenshots given below.
+        <ol>
+          <li><strong>media-query.css</strong>
+            <ol class="check">
+              <li>Do <strong>not</strong> include a media query.</li>
+              <li>Use the Google Font - Roboto in the <code>body</code> rule.</li>
+              <li>The <code>header</code>, <code>main</code>, and <code>footer</code> each
+                <ol>
+                  <li>have a maximum width of 640 pixels,</li>
+                  <li>are centered on the page using <code>margin: 1rem auto</code>,</li>
+                  <li>include a faint border,</li>
+                  <li>use appropriate padding, and</li>
+                  <li>have a blueish background color of your choice.</li>
+                </ol>
+                <div class="callout info smaller">
+                  <p>Remember that you can combine these three selectors
+                    into one rule or create a
+                    class that contains these common CSS declarations.</p>
+                </div>
+
+              </li>
+              <li>Declare the main element to be a CSS grid with a grid template of only one column,
+                and
+                a equal gap of 1rem, and
+                <div class="callout info smaller">
+                  <p>
+                    If you had a question to pose to the class in Microsoft Teams,
+                    use specific and descriptive language, e.g., "<em>I have a question about the
+                      media-query
+                      assignment part 5.1.4. I do
+                      not know how to set the main element grid to only one column with an even gap
+                      of
+                      1rem.</em>"
+                  </p>
+                </div>
+              </li>
+              <li>Declare the section elements to also have padding and a lighter or white
+                background.</li>
+            </ol>
+            <details>
+              <summary>Check Your Understanding</summary>
+              <pre><code class="css">body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header, main, footer {
+  max-width: 640px;
+  margin: 1rem auto;
+  border: 1px solid #bbb;
+  padding: 1rem;
+  background-color: #e6f2ff;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+section {
+  padding: 1rem;
+  background-color: #fff;
+}</code></pre>
+            </details>
+          </li>
+        </ol>
+      </li>
+      <li>In the <strong>media-query-large.css,</strong>
+        <ol>
+          <li>Write a containing media query to be applied at a viewport width of 500px or greater.
+            <pre><code class="css">@media screen and (min-width: 500px)</code></pre>
+          </li>
+          <li>Change through declaration within the media query the <strong>header</strong> to a
+            black background with white text, and</li>
+          <li>Change the <strong>main</strong> element to display two columns of equal size.
+            <details>
+              <summary>Example</summary>
+              <pre><code class="css">grid-template-columns: 1fr 1fr;</code></pre>
+            </details>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <h3>Example Screenshots</h3>
+    <figure>
+      <img src="../images/media-query-sm.png" alt="Screenshot of media query example in the mobile view." loading="lazy"
+        width="192" height="384">
+      <figcaption>Figure 1: Mobile View Screenshot</figcaption>
+    </figure>
+    <figure>
+      <img src="../images/media-query-lg.png" alt="Screenshot of media query example in the large view" loading="lazy"
+        width="600" height="408">
+      <figcaption>Figure 2: Wider View Screenshot</figcaption>
+    </figure>
+    <h3>Testing</h3>
+    <p class="callout info">You should be continuously checking your browser
+      rendered work using <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer"
+        target="_blank" rel="noopener">Live Server</a> extension.</p>
+    <ol>
+      <li>Test your work by resizing your browser window or by using <a
+          href="https://developer.chrome.com/docs/devtools/device-mode/" target="_blank" rel="noopener">DevTools
+          device settings</a> to see the changes in the layout.</li>
+      <li>Run through this <a href="https://developers.google.com/codelabs/devtools-cvd#0" target="_blank"
+          rel="noopener">Google CodeLab</a> to test color contrast accessibility or use the <a
+          href="https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/css/css-overview-tool"
+          target="_blank" rel="noopener">CSS Overview</a> to get a quick check on color contrast and other CSS
+        usage.</li>
+      <li>You will need to commit and push your work to your GitHub Pages enabled wdd131 site in
+        order to use the <a href="../audit/w02-media-queries.html">Page Audit Tool</a>.</li>
+
+    </ol>
+
+    <hr>
+    <nav>
+      <span><a href="index.html">Back</a></span>
+    </nav>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="../scripts/prevent-code-select.js"></script>
+</body>
+
+</html>
