@@ -1,0 +1,152 @@
+
+
+
+
+body {
+    font-family: 'Roboto', 'Open Sans'; 
+    margin: 0;
+}
+
+main h1 {
+    text-align: center;
+}
+
+header {
+    background-color: #333; 
+    color: white;
+}
+
+header h1 {
+    position: relative;
+    top: 30px;
+    display: flex;
+    text-align: center;
+    justify-content: start;
+    align-items: center;
+    margin-top: 0;
+    margin-left: 30px;
+}
+
+nav ul {
+    position: relative;
+    bottom: 25px;
+    list-style: none;
+    display: flex;
+    text-align: center;
+    justify-content: end;
+    align-items: center;
+    margin-right: 30px;
+    gap: 40px;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0.5rem 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    text-align: center;
+    justify-content: end;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+img {
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    align-items: end;
+    justify-content: end;
+    position: relative;
+    bottom: 30px;
+    margin-right: 40px;
+    text-align: end;
+
+}
+
+.close {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navigation ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 100%;
+        padding: 0px 0;
+    }
+    
+    .navigation.active ul {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    
+
+    
+    .navigation ul li a {
+        color: white;
+        font-size: 18px;
+        padding: 10px;
+        display: block;
+        text-align: center;
+    }
+
+    .hamburger.open:before {
+        content: '\00D7';
+        order: -1;
+    }
+
+
+
+}
+
+@media (min-width: 769px) {
+    .navigation ul {
+        display: flex;
+    }
+}
