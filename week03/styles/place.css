@@ -1,0 +1,91 @@
+:root {
+    --green: #4CAF50;
+    --yellow: #FFEB3B;
+    --blue: #2196F3;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: 'Roboto', 'Open Sans'; 
+    margin: 0 auto;
+}
+
+header {
+    background-color: #2196F3;
+}
+
+
+h1 {
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+    padding: 30px;
+    color: #FFFFFF;
+    font-size: 40px;
+}
+
+main {
+    margin-bottom: 0;
+    background-color: #4CAF50;
+
+}
+
+main img {
+    width: 1400px;
+    margin-top: 20px;
+    margin-bottom: 0%;
+}
+
+footer {
+    background-color: #2196F3;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    margin: 0%;
+}
+
+
+.data, h2 {
+    color: #FFFFFF;
+    background-color: #4CAF50;
+}
+
+.weather h2 {
+    color: #FFFFFF;
+}
+
+.data {
+    display: flex;
+    align-items: flex-start;
+}
+
+.weather {
+    display: flex;
+    align-items: flex-end;
+}
+
+nav {
+    background-color: #FFFFFF;
+    max-width: 400px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Weather icon pseudo-element */
+.weather:after {
+    content: '⛅'; /* Use the appropriate icon or emoticon */
+    font-size: 24px;
+    color: var(--blue);
+    margin-left: 10px;
+  }
+  
+  /* Example for the weather section */
+  .weather {
+    display: flex;
+    align-items: center;
+  }
+  
+  .weather h2 {
+    margin-right: 10px;
+  }

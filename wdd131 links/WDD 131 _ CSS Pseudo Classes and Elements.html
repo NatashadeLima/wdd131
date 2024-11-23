@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 | CSS Pseudo Classes and Elements</title>
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/course.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/vs2015.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 131<span id="coursetitle">: Dynamic Web Fundamentals</span></h1>
+      <img src="../images/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+  <main class="page">
+    <nav>
+      <span><a href="../">Home</a></span>
+      <span><a href="../week01/">W1</a></span>
+      <span><a href="../week02/">W2</a></span>
+      <span class="active"><a href="../week03/">W3</a></span>
+      <span><a href="../week04/">W4</a></span>
+      <span><a href="../week05/">W5</a></span>
+      <span><a href="../week06/">W6</a></span>
+      <span><a href="../week07/">W7</a></span>
+    </nav>
+    <h2>CSS Concepts: Pseudo Selection</h2>
+
+    <h3>Overview</h3>
+    <p>
+      Pseudo-classes and pseudo-elements are used to abilities and/or content to some selectors. A
+      pseudo-class is used to define a special state of an element. For example, it can be used to
+      change the color of a button when the user mouses over it. A pseudo-element is used to style
+      specified parts of an element, like the first letter, or the first line of a paragraph.
+    </p>
+    <div class="callout info">
+      <p>
+        You have been using a pseudo-class named <code>:hover</code> which can be used to select a
+        button when a user's pointer hovers over the button.
+      </p></div>
+
+    <h3>Prepare - Pseudo-classes</h3>
+
+    <ul>
+      <li>Reference: <a href="https://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank" rel="noopener">CSS
+          Pseudo-classes</a> - w3schools.com - use the Try It
+        editor
+        to work with the concept.</li>
+      <li>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:root" target="_blank" rel="noopener">CSS
+          :root</a> - MDN - can be useful for declaring global <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS
+          variables</a>. Why are CSS variables desirable?</li>
+      <li>Ponder: <a href="https://codepen.io/callmenick/pen/OxpKNZ?editors=1100" target="_blank" rel="noopener">CSS
+          Only Floated Labels</a> - CodePen by Nick Salloum
+        <details>
+          <summary>Can you find all the instances of CSS pseudo-classes being used in this CodePen
+            example?</summary>
+          <ul class="check">
+            <li>:root</li>
+            <li>:focus</li>
+            <li>:placeholder-shown</li>
+            <li>:not</li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+
+    <div class="callout info">
+      <p>
+        Often, a key design issue with color contrast is not accounting for the default settings of
+        browsers, specifically an anchor tags link and visited properties. These can be adjusted with
+        pseudo-classes.
+      </p></div>
+
+    <h3>Activity Instructions: Pseudo-classes</h3>
+    <ol>
+      <li>Fork the <a href="https://codepen.io/blazzard-jason/pen/PoaQgXJ" target="_blank" rel="noopener">CodePen</a> to
+        your own <strong>CodePen</strong> account.</li>
+      <li>Add CSS pseudo-class rule(s) for the anchor tags to be <strong><span style="color: #236fa1;">navy</span>
+        </strong>for both <strong>active</strong>
+        <strong>links</strong> and <strong>visited</strong> links.
+      </li>
+      <li>Add a CSS pseudo-class rule for the anchor tags to change to <strong><span
+            style="color: #843fa1;">purple</span> </strong>when the user <strong>hovers</strong>
+        over
+        any links.</li>
+      <li>Add CSS pseudo-class rule to provide borders for the 'table' (div.datatable) so that the
+        borders of the 'cells' (div.col elements) do not double up. (see example screenshot below)
+      </li>
+      <li>Make the last row of the 'table' have a darker gray background color by using the
+        <code>:last-child</code> pseudo-class.
+      </li>
+      <li>Set up a CSS variable for the border value in the <code>:root</code> pseudo-class for the
+        document of <code>1px solid #777</code>;
+        <details>
+          <summary>Hints</summary>
+          <ul>
+            <li><code class="css">:root { --bord: _____}</code> then use it with <code class="css">var(--bord)</code>
+              where needed,<br>for example, <code class="css">border-right: var(--bord);</code></li>
+            <li>Consider the use of border-top, etc. versus using the CSS border property shortcut
+              to
+              isolate your bordering needs.</li>
+            <li>Use the <code>:nth-child()</code> and the <code>:last-child</code> pseudo-classes.
+            </li>
+          </ul>
+        </details>
+      </li>
+    </ol>
+    <figure>
+      <img src="../images/pseudo-classes.png"
+        alt="Screenshot of pseudo-class CodePen example" width="650" height="267"><br>
+      <figcaption>Screenshot of Pseudo-Class CodePen</figcaption>
+    </figure>
+    <details>
+      <summary>Example Solution</summary>
+      <p>
+        <a href="https://codepen.io/blazzard-jason/pen/bGKLQMp" target="_blank" rel="noopener">CodePen</a>
+      </p>
+    </details>
+
+    <h3>Prepare: Pseudo-elements</h3>
+    <ul>
+      <li>Reference: <a href="https://www.w3schools.com/css/css_pseudo_elements.asp" target="_blank" rel="noopener">CSS
+          Pseudo-elements</a> - w3schools.com - <span class="smaller">Use the Try It
+          feature to experiment</span>
+        <div class="callout info">
+         <p>
+            Most browsers will actually accept single colons versus double-colons.
+            However, it is good practice to always use double colons <code>::</code> when selecting pseudo-elements.
+         </p></div>
+      </li>
+    </ul>
+    <h3>Activity Instructions</h3>
+    <ol>
+      <li>Fork the <a href="https://codepen.io/blazzard-jason/pen/LYjLRqN" target="_blank" rel="noopener">CodePen</a> to
+        your own CodePen account.</li>
+      <li>Add a <strong>marker pseudo-element</strong> to the CSS.</li>
+      <li>In the marker rule, add declarations to change the ordered list's numbers
+        <ol>
+          <li><strong>color</strong> (navy),</li>
+          <li><strong>font-size</strong> (2rem), and</li>
+          <li><strong>font-variant</strong> (small-caps).</li>
+        </ol>
+      </li>
+      <li>Add a <strong>before pseudo-element</strong> to add a dark checkbox emoji ☑️ to the front
+        of the ordered list items.
+        <div class="callout info">
+          <p>
+            Emoji Picker: <a
+              href="https://support.microsoft.com/en-us/windows/windows-keyboard-tips-and-tricks-588e0b72-0fff-6d3f-aeee-6e5116097942"
+              target="_blank" rel="noopener">MS Windows</a> • MAC <code class="cli">⌘-ctrl-spacebar</code>
+          </p>
+        </div>
+      </li>
+    </ol>
+
+    <hr>
+    <figure>
+      <img src="../images/pseudo-elements.png"
+        alt="Screenshot of pseudo-element learning activity CodePen example." loading="lazy"
+        width="589" height="360">
+      <figcaption>Screenshot of Pseudo-Element CodePen</figcaption>
+    </figure>
+
+
+  </main>
+  <footer>
+    <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</body>
+
+</html>
