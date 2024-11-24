@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 | JavaScript Arrays and Array Methods</title>
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/course.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/vs2015.min.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 131<span id="coursetitle">: Dynamic Web Fundamentals</span></h1>
+      <img src="../images/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+  <main class="page">
+    <nav>
+      <span><a href="../">Home</a></span>
+      <span><a href="../week01/">W1</a></span>
+      <span><a href="../week02/">W2</a></span>
+      <span class="active"><a href="https://byui-cse.github.io/wdd131-ww-course/week03">W3</a></span>
+      <span><a href="../week04/">W4</a></span>
+      <span><a href="../week05/">W5</a></span>
+      <span><a href="../week06/">W6</a></span>
+      <span><a href="../week07/">W7</a></span>
+    </nav>
+
+    <h2>JavaScript Arrays and Array Methods</h2>
+
+    <h3>Overview</h3>
+    <p>
+      An array is a data structure that contains a list of elements which store multiple values in a
+      single variable. Arrays are used to store multiple values in a single variable, instead of
+      declaring separate variables for each value.
+    </p>
+    <h3>Prepare</h3>
+    <p>In JavaScript, arrays can be declared like this:</p>
+    <pre><code class="javascript">let scores = [100, 72, 83, 94, 88, 87];</code></pre>
+    <pre><code class="javascript">let names = ['Nancy','Blessing','Jorge','Svetlana'];</code></pre>
+
+    <p>Arrays are zero-based indexed, meaning the first element is at index 0, the second element is
+      at
+      index 1, and so on.</p>
+    <p>Arrays can be accessed by an index reference:</p>
+    <pre><code class="javascript">let aScore = scores[0];  // The aScore variable is assigned the value of 100</code></pre>
+    <p>Arrays values can be modified:</p>
+    <pre><code class="javascript">scores[0] = 99; // This assignment expression changed the first score in the array from 100 to 99.</code></pre>
+    <p>Arrays can be iterated over using a classic for loop:</p>
+    <pre><code class="javascript">for (let i = 0; i &lt; scores.length; i++) {
+  console.log(scores[i]);
+}</code></pre>
+    <p><strong>Preferred:</strong> Arrays can be iterated over using other looping structures like
+      <code>forEach</code>:
+    </p>
+    <pre><code class="javascript">scores.forEach(function(score) {
+  console.log(score);
+});</code></pre>
+
+    <p>Arrays have a <code>length</code> property:</p>
+    <pre><code class="javascript">let numScores = scores.length; // The numScores variable is assigned the value of 6</code></pre>
+    <h4>Array Methods</h4>
+    <p>Arrays have a number of methods that can be used to manipulate (change) them:</p>
+    <pre><code class="javascript">scores.push(100); // Adds a new element to the end of the array</code></pre>
+    <pre><code class="javascript">scores.pop(); // Removes the last element from the array</code></pre>
+    <pre><code class="javascript">scores.shift(); // Removes the first element from the array</code></pre>
+    <pre><code class="javascript">scores.unshift(100); // Adds a new element to the beginning of the array</code></pre>
+    <pre><code class="javascript">scores.slice(2,3); // Cut out a portion of the array starting at an index for a given length</code></pre>
+    <pre><code class="javascript">scores.splice(2, 1); // Removes 1 element from the array starting at index 2</code></pre>
+    <pre><code class="javascript">scores.join(', '); // transform the array into a single string with a comma and space delimiter option</code></pre>
+
+
+    <ul>
+      <li>Reference <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+          target="_blank" rel="noopener">JavaScript Arrays Reference</a> - MDN web docs
+        <div class="callout info">
+          This reference provides a complete list of array methods of which some will be used
+          extensively in this course.
+        </div>
+      </li>
+    </ul>
+
+
+    <h3>Check Your Understanding</h3>
+    <p>Given this array declaration:</p>
+    <pre><code class="javascript">let names = ['Nancy','Blessing','Jorge','Svetlana'];</code></pre>
+    <ul class="check">
+
+
+      <li>What is the value of the following expression?
+        <pre><code class="javascript">names[2];</code></pre>
+        <details>
+          <summary>Answer</summary>
+          <p>Jorge</p>
+        </details>
+      </li>
+      <li>What is the value of the following expression?
+        <pre><code class="javascript">names.length;</code></pre>
+        <details>
+          <summary>Answer</summary>
+          <p>4</p>
+        </details>
+      </li>
+      <li>What is the index of the last item in the array? (Svetlana)
+        <details>
+          <summary>Answer</summary>
+          <p>3</p>
+        </details>
+      </li>
+      <li>What does the following expression do?
+        <pre><code class="javascript">names.push('Sally');</code></pre>
+        <details>
+          <summary>Answer</summary>
+          <p>Adds a new element to the end of the array</p>
+        </details>
+      </li>
+    </ul>
+
+    <div class="callout reference">
+      <h4>Additional Resources</h4>
+      <ul>
+        <li><a href="https://dev.to/webdev-mohdamir/master-javascript-array-methods-like-a-pro-part-1-1f3j"
+            target="_blank" rel="noopener">Master JavaScript Array Methods Like a Pro</a></li>
+      </ul>
+    </div>
+
+    <hr>
+    <nav>
+      <span><a href="index.html">Back</a></span>
+    </nav>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+</body>
+
+</html>
