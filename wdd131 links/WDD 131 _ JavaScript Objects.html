@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 | JavaScript Objects</title>
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/course.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/defaultk.min.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 131<span id="coursetitle">: Dynamic Web Fundamentals</span></h1>
+      <img src="../images/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+  <main class="page">
+    <nav>
+      <span><a href="../">Home</a></span>
+      <span><a href="../week01/">W1</a></span>
+      <span><a href="../week02/">W2</a></span>
+      <span><a href="../week03/">W3</a></span>
+      <span class="active"><a href="../week04/">W4</a></span>
+      <span><a href="../week05/">W5</a></span>
+      <span><a href="../week06/">W6</a></span>
+      <span><a href="../week07/">W7</a></span>
+    </nav>
+    <h2>Objects</h2>
+    <h3>Overview</h3>
+    <p>
+      JavaScript objects are a way to group related data and functions together. Objects are a core
+      concept in JavaScript and are used extensively in the language. In this learning activity, you
+      will learn how to create and use objects in JavaScript.
+    </p>
+
+    <div class="callout info">
+      "An object is a collection of related data and/or functionality. These usually consist of
+      several variables and functions (which are called properties and methods when they are inside
+      objects)." - <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics" target="_blank"
+        rel="noopener">MDN Web Docs</a>
+    </div>
+
+    <details class="clo">
+      <summary><strong>Course Learning Outcomes</strong></summary>
+      <ol>
+
+        <li>Demonstrate proficiency with JavaScript language syntax.</li>
+        <li>Use JavaScript to respond to events and dynamically modify HTML.</li>
+
+      </ol>
+    </details>
+
+    <h3>Prepare</h3>
+    <p>Here's an example of a JavaScript object representing a person:
+    <pre><code class="javascript">let person = {
+  name: "Antonia Francesca",
+  age: 30,
+  profession: "Software Engineer",
+  hobbies: ["reading", "playing guitar", "hiking"],
+  address: {
+    street: "123 Camino Real",
+    city: "Santa Rosa",
+    country: "Honduras"
+  },
+  isEmployed: true,
+  greet: function() {
+    console.log(`Hello, my name is ${this.name}.`);
+  }
+};</code></pre>
+    </p>
+    <p>In this example, the person object has various properties such as name, age, profession,
+      hobbies, address, and
+      isEmployed. It also includes a greet method that logs a greeting message to the console using
+      the person's name.
+    </p>
+    <p>The address property is an object itself, containing nested properties such as street, city,
+      and country.</p>
+    <p>You can access and modify the properties and invoke the methods of the person object using
+      dot notation or
+      bracket notation. For example:</p>
+    <pre><code class="javascript">console.log(person.hobbies[0]); // Output: reading</code></pre>
+    <ul>
+      <li>Read <a href="https://byui-cit.github.io/learning-modules/modules/js/objects/prepare1/" target="_blank"
+          rel="noopener">Objects -
+          Representing Data</a> - WDD Learning Modules</li>
+      <li>Reference <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics" target="_blank"
+          rel="noopener">Object Basics</a> - MDN web docs</li>
+    </ul>
+
+    <h3>Check Your Understanding</h3>
+    <ul>
+      <li>Complete the following Ponder activity: <a
+          href="https://byui-cit.github.io/learning-modules/modules/js/objects/ponder1/">JS
+          Objects</a> - WDD Learning
+        Modules
+      </li>
+    </ul>
+
+    <hr>
+    <nav>
+      <span><a href="index.html">Back</a></span>
+    </nav>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+</body>
+
+</html>
