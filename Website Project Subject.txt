@@ -1,0 +1,12 @@
+Website Project Subject
+
+My website project will focus on volleyball. The site will include 
+information about the rules of the game, player positions, strategies, 
+and tips for improving skills. It will also highlight famous players 
+and teams and feature a section for beginners to learn the basics.
+
+I chose this topic because volleyball is a hobby I am passionate 
+about, and I want to share this enthusiasm with others while 
+promoting the sport. This project allows me to combine my love 
+for volleyball with my technical skills in web development, 
+creating a platform to engage and inform a wider audience.
