@@ -44,6 +44,7 @@ main {
 
 
 
+
 .container-positions {
     width: 300px;
     height: 100px;
@@ -75,11 +76,11 @@ main {
     display: grid;
     grid-template-columns: 2fr 2fr;
     background-color: #e88300;
-    margin-bottom: 20px;
 }
 
 .container img {
     margin-bottom: 20px;
+
 }
 
 .container h2 {
