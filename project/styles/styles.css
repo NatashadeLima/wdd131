@@ -9,7 +9,7 @@ header nav ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: #00A8E8;
+    background: #004561;
     padding: 30px;
     list-style: none;
     margin: 0 auto;
@@ -75,7 +75,7 @@ main {
 .container {
     display: grid;
     grid-template-columns: 2fr 2fr;
-    background-color: #e88300;
+    background-color: #613700;
 }
 
 .container img {
@@ -101,7 +101,7 @@ main {
 .container2 {
     display: flex;
     grid-template-columns: 2fr 2fr;
-    background-color: #e88300;
+    background-color: #613700;
     margin-bottom: 20px;
 }
 
@@ -131,8 +131,8 @@ main {
     padding: 5px;
     border-radius: 5px;
     font-family: Roboto;
-    color: #e4e800;
-    background-color: #ff0000;
+    color: #000000;
+    background-color: #e4e800;
 }
 
 footer {
@@ -153,6 +153,13 @@ footer {
         display: grid;
         
     }
+
+    .body-positions {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0;
+        overflow-x: hidden;
+    }
 }
 
 .container img {
@@ -161,7 +168,7 @@ footer {
 }
 
 .button {
-    background-color: #0385b8;
+    background-color: #004561;
     display: inline-block;
     padding:  0px 20px 20px 20px;
     border-radius: 15px;
@@ -187,7 +194,7 @@ footer {
 }
 
 .rules {
-    background-color: #e88300;
+    background-color: #613700;
     color: #ffffff;
 }
 
@@ -224,7 +231,7 @@ footer {
 }
 
 .section1 {
-    background-color: #e88300;
+    background-color: #613700;
 
 }
 
