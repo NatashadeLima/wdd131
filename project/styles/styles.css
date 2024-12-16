@@ -242,4 +242,10 @@ footer {
 
 .section1 img {
     margin-bottom: 20px;
+    width: 600px;
+}
+
+.body-positions {
+    overflow-x: hidden;
+    margin-right: 0;
 }
