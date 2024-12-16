@@ -171,7 +171,9 @@ footer {
 }
 
 .button h2 {
+    background-color: #ffffff;
     color: #000000;
+    border-radius: 15px;
 }
 
 .rules img {
