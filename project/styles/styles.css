@@ -164,6 +164,7 @@ footer {
     display: inline-block;
     padding:  0px 20px 20px 20px;
     border-radius: 15px;
+    margin-top: 10px;
 }
 
 .button p {
@@ -171,9 +172,10 @@ footer {
 }
 
 .button h2 {
+    
     background-color: #ffffff;
     color: #000000;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 .rules img {
