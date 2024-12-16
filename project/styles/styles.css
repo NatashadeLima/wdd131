@@ -203,7 +203,8 @@ footer {
 }
 
 .bodyplayers {
-    margin-right: 0px;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 .famous-players {
